@@ -8,8 +8,6 @@ namespace InterviewApplication
     {
         static void Main(string[] args)
         {
-
-            
             int[][] incompleteBoard = new int[][]
                 {
                     new int[] {5, 3, 4, 6, 7, 8, 9, 1, 2}, 
@@ -64,7 +62,7 @@ namespace InterviewApplication
                             columns = y;
                         }
             
-            possibilities = PossibleEntries(board, rows, columns);
+            possibilities = GetPossibleEntries(board, rows, columns);
 
             for (int x = 1; x < 10; x++)
                 if(possibilities[x] != 0)
@@ -76,7 +74,7 @@ namespace InterviewApplication
             board[rows][columns] = 0;
         }
 
-        public static int[] PossibleEntries(int[][] board, int i, int j)
+        public static int[] GetPossibleEntries(int[][] board, int i, int j)
         {
             int[] possibilities = new int[10];
             
