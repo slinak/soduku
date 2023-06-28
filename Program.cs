@@ -4,11 +4,8 @@ using System.Collections.Generic;
 
 namespace InterviewApplication
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int[][] incompleteBoard = new int[][]
+    /*
+     * int[][] incompleteBoard = new int[][]
                 {
                     new int[] {5, 3, 4, 6, 7, 8, 9, 1, 2}, 
                     new int[] {6, 7, 2, 1, 9, 5, 3, 4, 8},
@@ -20,13 +17,8 @@ namespace InterviewApplication
                     new int[] {2, 8, 7, 4, 1, 9, 6, 3, 5},
                     new int[] {3, 0, 0, 2, 8, 6, 1, 7, 9},
                 };
-            Console.WriteLine("Initial Board:");
-            PrintBoard(incompleteBoard);
-
-            Console.WriteLine("Solved Board:");
-            SolveBoard(incompleteBoard);
-            /*
-            int[][] solvedBoard = new int[][]
+     * 
+     * int[][] solvedBoard = new int[][]
                 {
                     new int[] {5, 3, 4, 6, 7, 8, 9, 1, 2}, 
                     new int[] {6, 7, 2, 1, 9, 5, 3, 4, 8},
@@ -38,8 +30,41 @@ namespace InterviewApplication
                     new int[] {2, 8, 7, 4, 1, 9, 6, 3, 5},
                     new int[] {3, 4, 5, 2, 8, 6, 1, 7, 9},
                 };
-                */
+     */
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[][] incompleteBoard = CreateBoardFromUserInput();
+
+            Console.WriteLine("Initial Board:");
+            PrintBoard(incompleteBoard);
+
+            Console.WriteLine("Solved Board:");
+            SolveBoard(incompleteBoard);
+ 
             Console.ReadLine();
+        }
+
+        public static int[][] CreateBoardFromUserInput()
+        {
+            int[][] board = new int[9][];
+
+            for (int i = 0; i < 9; i++)
+            {
+                Console.WriteLine(String.Format("Please input values for row {0} and press Enter. Use 0 for unknowns.", i));
+                var tmp = Console.ReadLine();
+                board[i] = ProcessBoardLineInput(tmp);
+            }
+
+            Console.WriteLine("Line limit reached");
+
+            return board;
+        }
+
+        public static int[] ProcessBoardLineInput(string input)
+        {
+            return input.ToCharArray().Select(c => Int32.Parse(c.ToString())).ToArray();
         }
 
         public static void PrintBoard(int[][] board)
