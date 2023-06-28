@@ -1,0 +1,6 @@
+C:\Users\merse\Documents\GitHub\soduku\bin\Debug\ConsoleApplication.exe
+C:\Users\merse\Documents\GitHub\soduku\bin\Debug\ConsoleApplication.pdb
+C:\Users\merse\Documents\GitHub\soduku\obj\x86\Debug\SudokuSolver.csproj.AssemblyReference.cache
+C:\Users\merse\Documents\GitHub\soduku\obj\x86\Debug\SudokuSolver.csproj.CoreCompileInputs.cache
+C:\Users\merse\Documents\GitHub\soduku\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\merse\Documents\GitHub\soduku\obj\x86\Debug\ConsoleApplication.pdb

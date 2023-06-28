@@ -20,7 +20,10 @@ namespace InterviewApplication
                     new int[] {2, 8, 7, 4, 1, 9, 6, 3, 5},
                     new int[] {3, 0, 0, 2, 8, 6, 1, 7, 9},
                 };
+            Console.WriteLine("Initial Board:");
+            PrintBoard(incompleteBoard);
 
+            Console.WriteLine("Solved Board:");
             SolveBoard(incompleteBoard);
             /*
             int[][] solvedBoard = new int[][]
@@ -36,11 +39,11 @@ namespace InterviewApplication
                     new int[] {3, 4, 5, 2, 8, 6, 1, 7, 9},
                 };
                 */
+            Console.ReadLine();
         }
 
         public static void PrintBoard(int[][] board)
         {
-            Console.WriteLine("Board solved.");
             foreach (var line in board)
                 Console.WriteLine(String.Format("{0} {1} {2} {3} {4} {5} {6} {7} {8}", line[0], line[1], line[2], line[3], line[4], line[5], line[6], line[7], line[8]));
         }
