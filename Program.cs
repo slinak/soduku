@@ -61,6 +61,8 @@ namespace InterviewApplication
             rows = columns = 0;
             int[] possibleValues = new int[]{};
 
+            /*
+             * commenting out since zeros now mean unknown value
             if (IsFull(board))               
                 PrintBoard(board);
             else
@@ -71,6 +73,7 @@ namespace InterviewApplication
                             rows = x;
                             columns = y;
                         }
+            */
 
             possibleValues = GetPossibleValues(board, rows, columns);
 
