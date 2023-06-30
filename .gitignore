@@ -5,3 +5,5 @@ obj/x86/Debug/ConsoleApplication.exe
 bin/Debug/ConsoleApplication.pdb
 bin/Debug/ConsoleApplication.exe
 .vs/SudokuSolver/v16/.suo
+obj/x86/Debug/TempPE/UI.Designer.cs.dll
+obj/x86/Debug/DesignTimeResolveAssemblyReferences.cache
